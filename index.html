@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Mortgage repayment calculator</title>
+
+  <style>
+    .attribution { font-size: 11px; text-align: center; color:lightgray;}
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+ <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <main>
+    <section>
+  <div class="title-clear">
+  <h1>
+  Mortgage Calculator</h1>
+
+  <button class="clear">
+  Clear All</button></div>
+
+  <form>
+ 
+  <label for="amount">Mortgage Amount</label>   <div class="amount-section">
+  <span class="left">&#65505</span><input type="text" name="amount" id="amount"></input>
+</div><small class="hide">This field is required</small>
+
+  <div class="term-rate">
+  <div class="term-section">
+  <label for="term">
+  Mortgage Term</label>
+  <div class="years-span">
+  <input type="text" name="term" id="term"
+  ></input><span class="right" id="right1">years</span></div>  <small class="hide">This field is required</small></div>
+
+
+  <div class="rate-section">
+  <label for="rate">
+  Interest Rate</label>
+  <div class="years-span">
+  <input type="text" name="rate" id="rate"></input><span class="right" id="right2">%</span></div>  <small class="hide">This field is required</small></div></div>
+
+  <label for="type">
+  Mortgage Type</label>
+  <div class="type-item" id="repay"><span class="dot" id="dot1"></span>
+  <input type="radio" name="type" class="type" id="radio1">
+</input><span class="type-name">Repayment</span></div>
+
+<div class="type-item" id="interest"><span class="dot" id="dot2"></span>
+   <input type="radio" name="type" class="type" id="radio2">
+</input><span class="type-name">Interest Only</span></div>  <small class="hide">This field is required</small>
+
+ <button type="submit" class="calculate"><span class="icon"><img src="assets/images/icon-calculator.svg" alt="calculator">Calculate Repayments</span></button>
+  </form>
+  </section>
+
+  <!-- Empty results start -->
+
+  <aside>
+  <div class="empty-results">
+  <div class="calc-img"></div>
+  <h2>Results shown here</h2>
+
+  <p class="instruction">
+  Complete the form and click “calculate repayments” to see what 
+  your monthly repayments would be.</p>
+  </div>
+
+  <!-- Empty results end -->
+
+  <!-- Completed results start -->
+
+  <div class="your-results hide">
+    <div class="title-desc">
+  <p class="result-title">Your results</p>
+
+  <p class="result-instruction">
+  Your results are shown below based on the information you provided. 
+  To adjust the results, edit the form and click “calculate repayments” again.</p></div>
+
+  <div class="card">
+  <p class="card-title">
+  Your monthly repayments</p>
+<output class="monthly-amount"></output>
+
+<hr>
+
+  <p class="card-title">
+  Total you'll repay over the term</p>
+  <output class="total-amount"></output>
+  </div>
+  </div>
+  </aside>
+  </main>
+
+  <!-- Completed results end -->
+  
+  <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
+    Coded by KA.
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
